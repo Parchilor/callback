@@ -1,8 +1,6 @@
 TARGETNAME	:= main
 TARGETTYPE	:= APP
 
-#CROSS_COMPLIER = mipsel-openwrt-linux-
-
 CC	:=	$(CROSS_COMPLIER)gcc
 CXX	:=	$(CROSS_COMPLIER)g++
 LD	:=	$(CXX)

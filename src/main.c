@@ -1,20 +1,5 @@
-#include <math.h>
-#include <time.h>
-#include <errno.h>
-#include <stdio.h>
-#include <assert.h>
-#include <signal.h>
-#include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
-#include <pthread.h>
-#include <sys/types.h>
-#include <sys/utsname.h>
-
-typedef unsigned char u8;
-typedef unsigned short u16;
-typedef unsigned int u32;
-typedef unsigned long u64;
+#include <stdio.h>
 
 #define MAX_CB_LENGTH 256
 #define MAX_CB_ITEM 16
@@ -87,7 +72,6 @@ static void dispatch(struct cbline *cb)
 
 int main(int argc, char *argv[])
 {
-	int i;
 	struct cbline _cb = {.count = argc, .params = argv};
 	printf ("Testing!\n");
 	dispatch(&_cb);
